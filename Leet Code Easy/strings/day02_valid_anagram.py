@@ -7,6 +7,7 @@
 # Space Complexity: O(n)
 # Approach: Count frequency of each character in both strings and compare.
 
+
 # Define a function that takes two strings, s and t
 def is_anagram(s, t):
     # If s and t are not the same length, they can't be anagrams
@@ -30,13 +31,13 @@ def is_anagram(s, t):
     # If all checks passed, s and t are anagrams
     return True
 
-#Example usage
+# Example usage
 s = "listen"
 t = "silent"
 result = is_anagram(s, t)
 print(f"Input: s='{s}', t='{t}' → Output: {result}")
 
-#Test Cases
+# Additional test cases
 if __name__ == "__main__":
     test_cases = [
         ("anagram", "nagaram", True),
@@ -46,14 +47,14 @@ if __name__ == "__main__":
         ("ab", "ba", True),
         ("ab", "abc", False),
         ("aabbcc", "abcabc", True),
-        ("aacc", "ccac", False)
+        ("aacc", "ccac", False),
     ]
 
 print("Edge Cases:")
 
 # Loop through each test case in the list
 for s, t, expected in test_cases:
-    
+
     # Unpack the tuple into s and t
     # Call the is_anargam function with the current test case
     result = is_anagram(s, t)
