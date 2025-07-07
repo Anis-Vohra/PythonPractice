@@ -10,15 +10,19 @@
 
 # Define a function that takes two strings, s and t
 def is_anagram(s, t):
+   
     # If s and t are not the same length, they can't be anagrams
     if len(s) != len(t):
         return False
+    
     # Create an empty dictionary to count characters in s
     char_count = {}
+    
     # Count the frequency of each character in string s
     for char in s:
         # If the character is already in the dictionary, increment it. If not, set it to 1
         char_count[char] = char_count.get(char, 0) + 1
+   
     # Now iterate over each character in t
     for char in t:
         # If the character doesn't exist in the dictionary, it's not an anagram
@@ -28,6 +32,7 @@ def is_anagram(s, t):
         char_count[char] -= 1
         # If the count goes below 0, there are too many of that character in t
         return False
+    
     # If all checks passed, s and t are anagrams
     return True
 

@@ -11,8 +11,10 @@ def remove_dups(nums):
     # If the input list is empty, there is no elements to process
     if not nums:
         return 0
+   
     # The slow pointer keeps track of the index where the next unique number should go
     slow = 1
+  
     # Start the loop from the second element (index 1)
     for fast in range(1, len(nums)):
         # Compare current number to the one just before it
@@ -22,6 +24,7 @@ def remove_dups(nums):
             nums[slow] = nums[fast]
             # Move the slow pointer to the next available spot for a future unique number
             slow += 1
+   
     # After the loop finishes, slow is the count of unique elements
     # The first slow elements in numbs are now the deduplicated values
     return slow

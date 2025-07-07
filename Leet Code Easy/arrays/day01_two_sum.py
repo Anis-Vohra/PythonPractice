@@ -10,8 +10,10 @@
 
 # Define a function that takes in a list of numbers and a target
 def two_sum(nums, target):
+   
     # Create an empty dictionary to store numbers and their indices
     num_map = {}
+    
     # Iterate through the list using both index and value
     for i, num in enumerate(nums):
         # Calculate the complement
@@ -23,8 +25,6 @@ def two_sum(nums, target):
         # Store the current number and its index in the dictionary
         # This allows us to look it up quickly if its complement appears later
         num_map[num] = i
-
-
 
 # Example usage
 nums = [2, 7, 12, 15, 34, 68, 754]

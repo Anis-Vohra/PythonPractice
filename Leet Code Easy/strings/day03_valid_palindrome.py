@@ -10,8 +10,10 @@
 
 # Define a function that takes in a string s
 def is_palindrome(s):
+    
     # Initialize the two pointers: left at the start, right at the end
     left, right = 0, len(s) - 1
+   
     # Loop until the pointers meet in the middle
     while left < right:
         # Skip characters on the left that aren't letters or numbers
@@ -26,6 +28,7 @@ def is_palindrome(s):
         # Move both pointers inward
         left += 1
         right -= 1
+   
     # If we made it through the loop, it's a valid palindrome
     return True
 

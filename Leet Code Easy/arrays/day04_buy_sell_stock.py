@@ -11,10 +11,13 @@
 def max_profit(prices):
     # We haven’t seen any prices yet, so assume the worst
     # The price is infinitely high.
+   
     min_price = float('inf')
     # We haven’t made any trades yet, so our profit is 0
+  
     max_profit = 0
     # Loop through each days prices
+ 
     for price in prices:
         # Update the min price if lower price is found
         if price < min_price:
@@ -22,6 +25,7 @@ def max_profit(prices):
         # Calculate the profit if sold today and update max profit if its better
         elif price - min_price > max_profit:
             max_profit = price - min_price
+  
     #End of loop
     return max_profit
 
